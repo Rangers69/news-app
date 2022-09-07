@@ -17,25 +17,21 @@ class NewsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('news')->insert([
-            'title' => fake()->title(),
-            'description' => fake()->paragraph(2, true),
-            'category' => fake()->sentence(),
-            'author' => fake()->name(),
-        ]);
+
+        News::factory(50)->create();
 
         // $faker = Faker::create();
 
-        for ($i = 1; $i < 20; $i++) {
+        // for ($i = 1; $i < 20; $i++) {
 
-            $news = new News;
+        //     $news = new News;
 
-            $news->title = fake()->title();
-            $news->description = fake()->paragraph(2, true);
-            $news->category = fake()->sentence();
-            $news->author = fake()->name();
+        //     $news->title = fake()->title();
+        //     $news->description = fake()->paragraph(2, true);
+        //     $news->category = fake()->sentence();
+        //     $news->author = fake()->name();
 
-            $news->save();
-        }
+        //     $news->save();
+        // }
     }
 }
